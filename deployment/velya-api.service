@@ -1,0 +1,25 @@
+[Unit]
+Description=Velya API Server
+After=network.target postgresql.service redis.service
+Wants=postgresql.service redis.service
+
+[Service]
+Type=simple
+User=velya
+Group=velya
+WorkingDirectory=/opt/velya-server
+Environment="PATH=/opt/velya-server/venv/bin"
+EnvironmentFile=/opt/velya-server/.env
+ExecStart=/opt/velya-server/venv/bin/uvicorn backend.main:app --host 0.0.0.0 --port 8000 --workers 4
+Restart=always
+RestartSec=10
+
+# Security
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/opt/velya-server
+
+[Install]
+WantedBy=multi-user.target
