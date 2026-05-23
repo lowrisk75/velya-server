@@ -185,7 +185,7 @@
     <div class="card max-w-md w-full" onclick|stopPropagation>
       <h2 class="text-2xl font-display font-semibold mb-6">Nouveau webhook</h2>
 
-      <form onsubmit|preventDefault={createWebhook} class="space-y-4">
+      <form on:submit|preventDefault={createWebhook} class="space-y-4">
         <div>
           <label for="name" class="block text-sm font-medium mb-2">Nom</label>
           <input
