@@ -28,7 +28,7 @@ Backend API + web dashboard for Velya smart alarm remote management.
 ┌──────▼──────┐      ┌──────────────┐
 │ Home        │      │  Web         │
 │ Assistant   │─────►│  Dashboard   │
-│ Webhooks    │      │  (Svelte 5)  │
+│ Webhooks    │      │  (Svelte)    │
 └─────────────┘      └──────────────┘
 ```
 
@@ -43,10 +43,10 @@ Backend API + web dashboard for Velya smart alarm remote management.
 - WebSocket support
 
 **Frontend:**
-- Svelte 5 (reactive UI)
-- Vite (build tool)
-- TailwindCSS (styling)
-- Chart.js (timeline visualization)
+- Svelte 4.2 (reactive UI)
+- Vite 5.4 (build tool)
+- TailwindCSS 3.4 (styling)
+- Chart.js 4.4 (timeline visualization)
 
 ## Installation
 
