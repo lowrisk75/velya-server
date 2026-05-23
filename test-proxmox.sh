@@ -87,7 +87,7 @@ echo -e "\n${BLUE}[4/6]${NC} Déploiement de Velya Server..."
 
 pct exec $LXC_ID -- bash << 'EOF'
 cd /opt
-git clone https://github.com/lorislabapp/velya-server.git velya-server || git clone /tmp/velya-server velya-server
+git clone https://github.com/lowrisk75/velya-server.git velya-server || git clone /tmp/velya-server velya-server
 cd velya-server
 
 # Generate secrets

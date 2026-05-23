@@ -2,7 +2,7 @@
 set -euo pipefail
 
 # Velya Server - One-Liner Installer
-# Usage: curl -fsSL https://raw.githubusercontent.com/lorislabapp/velya-server/main/install.sh | bash
+# Usage: curl -fsSL https://raw.githubusercontent.com/lowrisk75/velya-server/main/install.sh | bash
 
 BOLD='\033[1m'
 GREEN='\033[0;32m'
@@ -62,7 +62,7 @@ version: '3.8'
 
 services:
   velya-api:
-    image: ghcr.io/lorislabapp/velya-server:latest
+    image: ghcr.io/lowrisk75/velya-server:latest
     container_name: velya-api
     ports:
       - "8000:8000"
@@ -162,7 +162,7 @@ http {
     <p>API: <a href="/api/health">/api/health</a></p>
     <p>Configure your iOS app to connect to this server.</p>
     <hr style="margin: 40px 0;">
-    <p><small>Version 1.0.0 • <a href="https://github.com/lorislabapp/velya-server">GitHub</a></small></p>
+    <p><small>Version 1.0.0 • <a href="https://github.com/lowrisk75/velya-server">GitHub</a></small></p>
 </body>
 </html>';
             add_header Content-Type text/html;
@@ -288,7 +288,7 @@ echo -e "   Redémarrer       : ${BLUE}docker-compose restart${NC}"
 echo -e "   Mise à jour      : ${BLUE}docker-compose pull && docker-compose up -d${NC}\n"
 
 echo -e "${BOLD}📚 Documentation :${NC}"
-echo -e "   GitHub  : ${BLUE}https://github.com/lorislabapp/velya-server${NC}"
+echo -e "   GitHub  : ${BLUE}https://github.com/lowrisk75/velya-server${NC}"
 echo -e "   Support : ${BLUE}support@lorislab.fr${NC}\n"
 
 echo -e "${BOLD}${YELLOW}⚠️  Sécurité :${NC}"

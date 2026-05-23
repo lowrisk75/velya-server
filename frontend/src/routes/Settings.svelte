@@ -44,7 +44,7 @@
             <a href="#docker-compose" onclick={() => dockerComposeGuide = true} class="btn btn-primary">
               Quick Start (5 min)
             </a>
-            <a href="https://github.com/lorislabapp/velya-server" target="_blank" class="btn btn-secondary">
+            <a href="https://github.com/lowrisk75/velya-server" target="_blank" class="btn btn-secondary">
               GitHub →
             </a>
           </div>
@@ -128,9 +128,9 @@
 
               <h3 class="font-semibold mb-3 mt-6">Installation one-liner</h3>
               <div class="relative">
-                <pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm"><code>curl -fsSL https://raw.githubusercontent.com/lorislabapp/velya-server/main/install.sh | bash</code></pre>
+                <pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm"><code>curl -fsSL https://raw.githubusercontent.com/lowrisk75/velya-server/main/install.sh | bash</code></pre>
                 <button
-                  onclick={() => copyToClipboard("curl -fsSL https://raw.githubusercontent.com/lorislabapp/velya-server/main/install.sh | bash")}
+                  onclick={() => copyToClipboard("curl -fsSL https://raw.githubusercontent.com/lowrisk75/velya-server/main/install.sh | bash")}
                   class="absolute top-2 right-2 p-2 bg-gray-700 hover:bg-gray-600 rounded text-white text-xs"
                 >
                   Copier
@@ -145,7 +145,7 @@
                     <pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-xs"><code>{`version: '3.8'
 services:
   velya-api:
-    image: ghcr.io/lorislabapp/velya-server:latest
+    image: ghcr.io/lowrisk75/velya-server:latest
     ports:
       - "8000:8000"
     environment:
@@ -182,7 +182,7 @@ services:
 volumes:
   postgres_data:`}</code></pre>
                     <button
-                      onclick={() => copyToClipboard("version: '3.8'\nservices:\n  velya-api:\n    image: ghcr.io/lorislabapp/velya-server:latest\n    ports:\n      - \"8000:8000\"\n    environment:\n      - DATABASE_URL=postgresql://velya:changeme@db/velya\n      - REDIS_URL=redis://redis:6379\n      - SECRET_KEY=${SECRET_KEY}\n    depends_on:\n      - db\n      - redis\n\n  db:\n    image: postgres:14-alpine\n    environment:\n      POSTGRES_DB: velya\n      POSTGRES_USER: velya\n      POSTGRES_PASSWORD: changeme\n    volumes:\n      - postgres_data:/var/lib/postgresql/data\n\n  redis:\n    image: redis:7-alpine\n\n  nginx:\n    image: nginx:alpine\n    ports:\n      - \"80:80\"\n      - \"443:443\"\n    volumes:\n      - ./nginx.conf:/etc/nginx/nginx.conf\n      - ./ssl:/etc/nginx/ssl\n    depends_on:\n      - velya-api\n\nvolumes:\n  postgres_data:")}
+                      onclick={() => copyToClipboard("version: '3.8'\nservices:\n  velya-api:\n    image: ghcr.io/lowrisk75/velya-server:latest\n    ports:\n      - \"8000:8000\"\n    environment:\n      - DATABASE_URL=postgresql://velya:changeme@db/velya\n      - REDIS_URL=redis://redis:6379\n      - SECRET_KEY=${SECRET_KEY}\n    depends_on:\n      - db\n      - redis\n\n  db:\n    image: postgres:14-alpine\n    environment:\n      POSTGRES_DB: velya\n      POSTGRES_USER: velya\n      POSTGRES_PASSWORD: changeme\n    volumes:\n      - postgres_data:/var/lib/postgresql/data\n\n  redis:\n    image: redis:7-alpine\n\n  nginx:\n    image: nginx:alpine\n    ports:\n      - \"80:80\"\n      - \"443:443\"\n    volumes:\n      - ./nginx.conf:/etc/nginx/nginx.conf\n      - ./ssl:/etc/nginx/ssl\n    depends_on:\n      - velya-api\n\nvolumes:\n  postgres_data:")}
                       class="absolute top-2 right-2 p-2 bg-gray-700 hover:bg-gray-600 rounded text-white text-xs"
                     >
                       Copier
@@ -258,7 +258,7 @@ docker run -d --name velya-api \\
   -e DATABASE_URL=postgresql://velya:changeme@velya-db/velya \\
   -e REDIS_URL=redis://velya-redis:6379 \\
   -e SECRET_KEY=$(openssl rand -hex 32) \\
-  ghcr.io/lorislabapp/velya-server:latest`}</code></pre>
+  ghcr.io/lowrisk75/velya-server:latest`}</code></pre>
           </div>
         {/if}
       </div>
@@ -279,7 +279,7 @@ docker run -d --name velya-api \\
           <div class="mt-6 pt-6 border-t border-gray-100 space-y-4">
             <p class="text-sm text-text-secondary">
               Pour Proxmox VE, voir le guide complet:
-              <a href="https://github.com/lorislabapp/velya-server/blob/main/DEPLOYMENT.md" target="_blank" class="text-primary hover:underline">
+              <a href="https://github.com/lowrisk75/velya-server/blob/main/DEPLOYMENT.md" target="_blank" class="text-primary hover:underline">
                 DEPLOYMENT.md
               </a>
             </p>
@@ -296,7 +296,7 @@ pct start 300
 pct enter 300
 
 # Dans le container
-git clone https://github.com/lorislabapp/velya-server.git /tmp/velya
+git clone https://github.com/lowrisk75/velya-server.git /tmp/velya
 cd /tmp/velya
 chmod +x deployment/deploy.sh
 ./deployment/deploy.sh`}</code></pre>
@@ -486,9 +486,9 @@ docker exec velya-redis redis-cli ping`}</code></pre>
           <div>
             <h3 class="font-semibold mb-2">Besoin d'aide ?</h3>
             <p class="text-sm text-text-secondary">
-              • Documentation complète : <a href="https://github.com/lorislabapp/velya-server" target="_blank" class="text-primary hover:underline">GitHub</a>
+              • Documentation complète : <a href="https://github.com/lowrisk75/velya-server" target="_blank" class="text-primary hover:underline">GitHub</a>
               <br>• Support : <a href="mailto:support@lorislab.fr" class="text-primary hover:underline">support@lorislab.fr</a>
-              <br>• Community : <a href="https://github.com/lorislabapp/velya-server/discussions" target="_blank" class="text-primary hover:underline">GitHub Discussions</a>
+              <br>• Community : <a href="https://github.com/lowrisk75/velya-server/discussions" target="_blank" class="text-primary hover:underline">GitHub Discussions</a>
             </p>
           </div>
         </div>

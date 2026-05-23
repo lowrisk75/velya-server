@@ -6,7 +6,7 @@ set -euo pipefail
 
 DEPLOY_USER="velya"
 DEPLOY_DIR="/opt/velya-server"
-REPO_URL="https://github.com/lorislabapp/velya-server.git"  # Update with actual repo
+REPO_URL="https://github.com/lowrisk75/velya-server.git"  # Update with actual repo
 
 echo "=== Velya Server Deployment ==="
 

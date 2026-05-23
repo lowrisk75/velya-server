@@ -74,7 +74,7 @@ Velya Server est une solution **self-hosted** complète qui vous permet de :
 ### Quick Start : One-Liner
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/lorislabapp/velya-server/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/lowrisk75/velya-server/main/install.sh | bash
 ```
 
 Cette commande :
@@ -94,7 +94,7 @@ Cette commande :
 version: '3.8'
 services:
   velya-api:
-    image: ghcr.io/lorislabapp/velya-server:latest
+    image: ghcr.io/lowrisk75/velya-server:latest
     ports:
       - "8000:8000"
     environment:
@@ -147,7 +147,7 @@ echo "SECRET_KEY=$SECRET_KEY" > .env
 #### 3. Télécharger la Config Nginx
 
 ```bash
-curl -o nginx.conf https://raw.githubusercontent.com/lorislabapp/velya-server/main/deployment/nginx-velya.conf
+curl -o nginx.conf https://raw.githubusercontent.com/lowrisk75/velya-server/main/deployment/nginx-velya.conf
 ```
 
 #### 4. Démarrer les Services
@@ -535,14 +535,14 @@ docker-compose pull
 docker-compose up -d
 ```
 
-**L'image Docker est automatiquement buildée** à chaque release GitHub et publiée sur `ghcr.io/lorislabapp/velya-server:latest`.
+**L'image Docker est automatiquement buildée** à chaque release GitHub et publiée sur `ghcr.io/lowrisk75/velya-server:latest`.
 
 ### Besoin d'aide ?
 
-- 📖 **Documentation complète :** [GitHub Wiki](https://github.com/lorislabapp/velya-server/wiki)
-- 💬 **Community :** [GitHub Discussions](https://github.com/lorislabapp/velya-server/discussions)
+- 📖 **Documentation complète :** [GitHub Wiki](https://github.com/lowrisk75/velya-server/wiki)
+- 💬 **Community :** [GitHub Discussions](https://github.com/lowrisk75/velya-server/discussions)
 - 📧 **Support :** [support@lorislab.fr](mailto:support@lorislab.fr)
-- 🐛 **Bug Report :** [GitHub Issues](https://github.com/lorislabapp/velya-server/issues)
+- 🐛 **Bug Report :** [GitHub Issues](https://github.com/lowrisk75/velya-server/issues)
 
 ---
 
@@ -576,7 +576,7 @@ Velya Server est **open source** (MIT License). Les contributions sont les bienv
 
 ```bash
 # Clone
-git clone https://github.com/lorislabapp/velya-server.git
+git clone https://github.com/lowrisk75/velya-server.git
 cd velya-server
 
 # Backend
@@ -625,9 +625,9 @@ Que vous soyez un **homelab enthusiast** avec un Proxmox, un **power user** avec
 
 **Ready to take control?**
 
-🚀 [Install Velya Server](https://github.com/lorislabapp/velya-server)  
+🚀 [Install Velya Server](https://github.com/lowrisk75/velya-server)  
 📱 [Download Velya on App Store](https://apps.apple.com/app/velya/idXXXXXXXX)  
-💬 [Join the Community](https://github.com/lorislabapp/velya-server/discussions)
+💬 [Join the Community](https://github.com/lowrisk75/velya-server/discussions)
 
 ---
 

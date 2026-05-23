@@ -22,7 +22,7 @@ Guide complet pour publier et tester Velya Server.
 cd /Users/kevinnadjarian/GitHub/velya-server
 
 # Ajouter remote
-git remote add origin https://github.com/lorislabapp/velya-server.git
+git remote add origin https://github.com/lowrisk75/velya-server.git
 
 # Push
 git push -u origin main
@@ -30,7 +30,7 @@ git push -u origin main
 
 ### 3. Configurer GitHub Container Registry
 
-Les GitHub Actions vont automatiquement build et push l'image Docker vers `ghcr.io/lorislabapp/velya-server:latest` dès le premier push.
+Les GitHub Actions vont automatiquement build et push l'image Docker vers `ghcr.io/lowrisk75/velya-server:latest` dès le premier push.
 
 **Vérifier après push:**
 - Actions tab → "Docker Build & Push" doit être en cours
@@ -40,7 +40,7 @@ Les GitHub Actions vont automatiquement build et push l'image Docker vers `ghcr.
 
 ```
 # Sur GitHub
-1. Aller sur le package: https://github.com/lorislabapp/velya-server/pkgs/container/velya-server
+1. Aller sur le package: https://github.com/lowrisk75/velya-server/pkgs/container/velya-server
 2. Package settings → Change visibility → Public
 3. Confirm
 ```
@@ -196,7 +196,7 @@ curl -fsSL https://get.docker.com | bash
 
 # Clone repo
 cd /opt
-git clone https://github.com/lorislabapp/velya-server.git
+git clone https://github.com/lowrisk75/velya-server.git
 cd velya-server
 
 # Deploy
@@ -325,7 +325,7 @@ Section {
     Text("Remote Management")
 } footer: {
     if settings.remoteServerEnabled {
-        Text("Self-hosting required. See github.com/lorislabapp/velya-server for installation guide.")
+        Text("Self-hosting required. See github.com/lowrisk75/velya-server for installation guide.")
     }
 }
 ```
@@ -442,7 +442,7 @@ Velya fonctionne 100% localement par défaut. Pour les utilisateurs avancés, h�
 • Synchroniser entre plusieurs appareils
 • Garder vos données chez vous
 
-Installation: github.com/lorislabapp/velya-server
+Installation: github.com/lowrisk75/velya-server
 Docker, Raspberry Pi, NAS Synology compatible.
 ```
 

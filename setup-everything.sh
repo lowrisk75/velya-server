@@ -23,7 +23,7 @@ __     __   _
 EOF
 echo -e "${NC}\n"
 
-GITHUB_USER="lorislabapp"
+GITHUB_USER="lowrisk75"
 GITHUB_REPO="velya-server"
 PROXMOX_HOST="10.9.8.8"
 LXC_ID="300"
@@ -317,7 +317,7 @@ Tech stack: FastAPI, PostgreSQL, Redis, Svelte 5
 
 5-minute setup on Raspberry Pi, Synology NAS, or any Docker host.
 
-GitHub: https://github.com/lorislabapp/velya-server
+GitHub: https://github.com/lowrisk75/velya-server
 
 Happy to answer questions!
 REDDIT_EOF
@@ -347,7 +347,7 @@ automation:
       service: rest_command.velya_disable_alarm
 ```
 
-GitHub: https://github.com/lorislabapp/velya-server
+GitHub: https://github.com/lowrisk75/velya-server
 
 AMA!
 REDDIT_HA_EOF
@@ -362,7 +362,7 @@ Self-hosted alarm management for iOS:
 • Web dashboard
 • Zero cost, zero tracking
 
-github.com/lorislabapp/velya-server
+github.com/lowrisk75/velya-server
 
 🧵 Thread on why I built this...
 
