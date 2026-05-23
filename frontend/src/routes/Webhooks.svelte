@@ -2,17 +2,17 @@
   import { onMount } from 'svelte';
   import { webhooks } from '../lib/api.js';
 
-  let webhooksList = $state([]);
-  let isLoading = $state(true);
-  let error = $state('');
-  let showCreateModal = $state(false);
-  let showUrlModal = $state(false);
-  let selectedWebhook = $state(null);
+  let webhooksList = [];
+  let isLoading = true;
+  let error = '';
+  let showCreateModal = false;
+  let showUrlModal = false;
+  let selectedWebhook = null;
 
   // Form state
-  let newName = $state('');
-  let newAlarmId = $state('');
-  let createdWebhook = $state(null);
+  let newName = '';
+  let newAlarmId = '';
+  let createdWebhook = null;
 
   async function loadWebhooks() {
     isLoading = true;
@@ -182,7 +182,7 @@
 <!-- Create Modal -->
 {#if showCreateModal}
   <div class="fixed inset-0 bg-black/50 flex items-center justify-center p-4" onclick={() => showCreateModal = false}>
-    <div class="card max-w-md w-full" onclick|stopPropagation>
+    <div class="card max-w-md w-full" on:click|stopPropagation>
       <h2 class="text-2xl font-display font-semibold mb-6">Nouveau webhook</h2>
 
       <form on:submit|preventDefault={createWebhook} class="space-y-4">
@@ -227,7 +227,7 @@
 {#if showUrlModal && (createdWebhook || selectedWebhook)}
   {@const webhook = createdWebhook || selectedWebhook}
   <div class="fixed inset-0 bg-black/50 flex items-center justify-center p-4" onclick={() => { showUrlModal = false; createdWebhook = null; selectedWebhook = null; }}>
-    <div class="card max-w-2xl w-full" onclick|stopPropagation>
+    <div class="card max-w-2xl w-full" on:click|stopPropagation>
       <h2 class="text-2xl font-display font-semibold mb-6">{webhook.name}</h2>
 
       <div class="space-y-4">

@@ -9,7 +9,7 @@
   import Analytics from './routes/Analytics.svelte';
   import Settings from './routes/Settings.svelte';
 
-  let isAuthenticated = $state(auth.isAuthenticated());
+  let isAuthenticated = auth.isAuthenticated();
 
   function handleLogout() {
     auth.logout();

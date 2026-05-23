@@ -2,10 +2,10 @@
   import { onMount } from 'svelte';
   import { alarms } from '../lib/api.js';
 
-  let alarmsList = $state([]);
-  let isLoading = $state(true);
-  let error = $state('');
-  let showCreateModal = $state(false);
+  let alarmsList = [];
+  let isLoading = true;
+  let error = '';
+  let showCreateModal = false;
 
   async function loadAlarms() {
     isLoading = true;
@@ -155,7 +155,7 @@
 <!-- Create Modal (placeholder for now) -->
 {#if showCreateModal}
   <div class="fixed inset-0 bg-black/50 flex items-center justify-center p-4" onclick={() => showCreateModal = false}>
-    <div class="card max-w-md w-full" onclick|stopPropagation>
+    <div class="card max-w-md w-full" on:click|stopPropagation>
       <h2 class="text-2xl font-display font-semibold mb-4">Nouveau réveil</h2>
       <p class="text-text-secondary mb-6">La création de réveils via le dashboard web sera bientôt disponible. Utilisez l'app iOS pour créer des réveils.</p>
       <button onclick={() => showCreateModal = false} class="btn btn-primary w-full">OK</button>

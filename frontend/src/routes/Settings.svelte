@@ -1,13 +1,13 @@
 <script>
-  let serverUrl = $state('https://velya.kevinn.ie');
+  let serverUrl = 'https://velya.kevinn.ie';
 
   // Expandable sections state
-  let dockerGuide = $state(false);
-  let dockerComposeGuide = $state(false);
-  let lxcGuide = $state(false);
-  let webhookDocs = $state(false);
-  let troubleshooting = $state(false);
-  let faq = $state(false);
+  let dockerGuide = false;
+  let dockerComposeGuide = false;
+  let lxcGuide = false;
+  let webhookDocs = false;
+  let troubleshooting = false;
+  let faq = false;
 
   function copyServerUrl() {
     navigator.clipboard.writeText(serverUrl);

@@ -4,7 +4,7 @@
 
   Chart.register(...registerables);
 
-  let { items = [] } = $props();
+  export let items = [];
 
   let canvas;
   let chart;
@@ -14,11 +14,9 @@
     return () => chart?.destroy();
   });
 
-  $effect(() => {
-    if (chart && items) {
-      updateChart();
-    }
-  });
+  $: if (chart && items) {
+    updateChart();
+  }
 
   function renderChart() {
     const ctx = canvas.getContext('2d');

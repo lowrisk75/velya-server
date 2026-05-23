@@ -3,10 +3,10 @@
   import { stats } from '../lib/api.js';
   import TimelineChart from '../components/TimelineChart.svelte';
 
-  let timelineData = $state(null);
-  let isLoading = $state(true);
-  let error = $state('');
-  let days = $state(7);
+  let timelineData = null;
+  let isLoading = true;
+  let error = '';
+  let days = 7;
 
   async function loadTimeline() {
     isLoading = true;

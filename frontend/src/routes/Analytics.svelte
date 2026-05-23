@@ -2,10 +2,10 @@
   import { onMount } from 'svelte';
   import { stats } from '../lib/api.js';
 
-  let alarmStats = $state(null);
-  let webhookStats = $state(null);
-  let isLoading = $state(true);
-  let error = $state('');
+  let alarmStats = null;
+  let webhookStats = null;
+  let isLoading = true;
+  let error = '';
 
   async function loadStats() {
     isLoading = true;
